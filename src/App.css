@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        sans-serif;
+
+    color: #172033;
+    background: #f6f7fb;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+button {
+    font: inherit;
+}
+
+button,
+.product-card {
+    transition: 0.2s ease;
+}
+
+.app {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 56px 0;
+}
+
+.page-header {
+    margin-bottom: 32px;
+}
+
+.page-header h1 {
+    margin: 8px 0;
+    font-size: 36px;
+}
+
+.page-header p {
+    margin: 0;
+    color: #687086;
+}
+
+.eyebrow {
+    color: #645cff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.product-card {
+    overflow: hidden;
+    border: 1px solid #e3e6ef;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(22, 30, 55, 0.06);
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(22, 30, 55, 0.1);
+}
+
+.product-image-wrapper {
+    position: relative;
+    height: 190px;
+    background: #eef0f7;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    color: #8b92a6;
+
+    font-size: 27px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.favorite-button.active {
+    color: #ef476f;
+}
+
+.product-content {
+    padding: 18px;
+}
+
+.product-content h3 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+
+.price {
+    margin-bottom: 18px;
+    color: #645cff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.add-button,
+.remove-button {
+    width: 100%;
+    padding: 11px 14px;
+
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.add-button {
+    border: none;
+    background: #645cff;
+    color: white;
+}
+
+.remove-button {
+    border: 1px solid #ffd2dc;
+    background: #fff1f4;
+    color: #e5385e;
+}
+
+.favorite-section {
+    margin-top: 56px;
+    padding: 28px;
+
+    border: 1px solid #e3e6ef;
+    border-radius: 20px;
+
+    background: white;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    margin: 6px 0 0;
+}
+
+.favorite-count {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+
+    border-radius: 50%;
+    background: #efedff;
+    color: #645cff;
+
+    font-weight: 800;
+}
+
+.empty-state {
+    padding: 45px 20px;
+    text-align: center;
+    color: #777f93;
+}
+
+.empty-heart {
+    color: #c4c8d3;
+    font-size: 48px;
+}
+
+.empty-state h3 {
+    margin-bottom: 7px;
+    color: #333b50;
+}
+
+.empty-state p {
+    margin: 0;
+}
+
+.favorite-list {
+    display: grid;
+    gap: 12px;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 12px;
+
+    border: 1px solid #ebedf3;
+    border-radius: 14px;
+}
+
+.favorite-item img {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.favorite-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.favorite-info span {
+    color: #645cff;
+    font-weight: 700;
+}
+
+.favorite-item button {
+    padding: 8px 12px;
+
+    border: 1px solid #ffd4dc;
+    border-radius: 8px;
+
+    background: #fff4f6;
+    color: #df3c5c;
+
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .app {
+        width: min(100% - 24px, 1120px);
+        padding: 32px 0;
+    }
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .favorite-section {
+        padding: 18px;
+    }
+}

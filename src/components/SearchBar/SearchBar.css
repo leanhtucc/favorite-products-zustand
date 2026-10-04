@@ -1,0 +1,27 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.search-bar input {
+    display: block;
+    width: min(100%, 36rem);
+    margin: 0;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    text-align: left;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.search-bar input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgb(37 99 235 / 12%);
+}
+
+.search-bar input::-webkit-search-cancel-button {
+    cursor: pointer;
+}

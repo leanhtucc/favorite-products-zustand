@@ -1,0 +1,28 @@
+.product-page-header {
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.product-page-header h1 {
+    margin: 0;
+    font-size: clamp(2.125rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+.product-page-header__description {
+    margin: 8px 0 0;
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+    .product-page-header {
+        margin-bottom: 20px;
+    }
+
+    .product-page-header h1 {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+}
